@@ -1153,7 +1153,7 @@ class HTMLTestRunner(Template_mixin):
         ending = self._generate_ending()
         chart = self._generate_chart(result)
         output = self.HTML_TMPL % dict(
-            jsonpath = self.path,
+            jsonpath = os.path.split(self.path)[1],
             title = saxutils.escape(self.title),
             generator = generator,
             stylesheet = stylesheet,
