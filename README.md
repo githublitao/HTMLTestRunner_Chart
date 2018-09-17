@@ -10,21 +10,21 @@ https://github.com/GoverSky/HTMLTestRunner_cn<br>
 5. 保存近10次测试结果，并通过柱状图展示<br>
 6. 切换测试日期，展示历史测试结果<br>
 兼容python2.x 和3.x
-# 注意：
+### 注意：
 1. 在是python3.x 中，如果在这里setUp里初始化driver ，因为3.x版本 unittest 运行机制不同，会导致用力失败时截图失败，目前只有采用捕获异常来截图，或者在setUpClass里初始化driver<br>
 2. 初始化必须命名为driver
-# 报告首页：
+### 报告首页：
 ![报告截图](https://github.com/githublitao/HTMLTestRunner_Chart/blob/master/img/%E9%A6%96%E9%A1%B5.png)<br>
-# 用例截图：
+### 用例截图：
 ![用例截图](https://github.com/githublitao/HTMLTestRunner_Chart/blob/master/img/%E6%98%BE%E7%A4%BA%E6%88%AA%E5%9B%BE.png)<br>
-# 失败饼图：
+### 失败饼图：
 ![失败饼图](https://github.com/githublitao/HTMLTestRunner_Chart/blob/master/img/%E9%A5%BC%E5%9B%BE.png)<br>
-# 历史走势：
+### 历史走势：
 ![历史走势](https://github.com/githublitao/HTMLTestRunner_Chart/blob/master/img/%E8%B5%B0%E5%8A%BF%E5%9B%BE.png)<br>
-# 微信打赏：
+### 微信打赏：
 ![微信打赏](https://github.com/githublitao/api_automation_test/blob/master/img/%E6%94%B6%E6%AC%BE%E7%A0%81.png)<br>
 <br>
-# 失败重试：
+### 失败重试：
 1. 生成报告的参数里面加了一个参数retry=1,这个表示用例失败后，会重新跑一次。<br>
 ```python
 if __name__ == '__main__':
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         save_last_try=True)
     runner.run(suite)
 ```
-# 保存测试结果到json文件：
+### 保存测试结果到json文件：
 ```python
     def mkdir_json(self):
         is_exists = os.path.exists(self.path)
@@ -101,7 +101,7 @@ if __name__ == '__main__':
         except IndexError:
             sys.stderr.write("JSON初始化内容有误! 初始化内容’var data = []‘")
 ```
-# 错误/失败截图，修改addError和addFail函数：
+### 错误/失败截图，修改addError和addFail函数：
 ```python
     def addFailure(self, test, err):
         self.failure_count += 1
@@ -125,7 +125,7 @@ if __name__ == '__main__':
         else:
             sys.stderr.write('F')
 ```
- # 错误重试，修改stopTest函数：
+### 错误重试，修改stopTest函数：
  ```python
      def stopTest(self, test):
         # Usually one of addSuccess, addError or addFailure would have been called.
@@ -159,7 +159,7 @@ if __name__ == '__main__':
                     self.trys = 0
         self.complete_output()
  ```
- # HTML模板导入JSON历史结果，如果JSON出现错误，则历史结果和走势图错误：
+### HTML模板导入JSON历史结果，如果JSON出现错误，则历史结果和走势图错误：
  ```html
  <head>
     <title>%(title)s</title>
