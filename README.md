@@ -2,7 +2,7 @@
 参考链接：
 http://tungwaiyip.info/software/HTMLTestRunner.html<br>
 https://github.com/GoverSky/HTMLTestRunner_cn<br>
-# 优化报告内容
+### 优化报告内容
 1. 测试报告中文显示，优化一些断言失败正文乱码问题<br>
 2. 新增错误和失败截图，展示到html报告里<br>
 3. 增加饼图统计<br>
