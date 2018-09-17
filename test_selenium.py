@@ -96,13 +96,13 @@ class case_01(unittest.TestCase):
         # self.assertTrue(False)
 
 
-# if __name__ == '__main__':
-suite = unittest.TestLoader().loadTestsFromTestCase(case_01)
-runner = HTMLTestRunner(
-    title="带截图，饼图，折线图，历史结果查看的测试报告",
-    description="",
-    stream=open("./demo.html", "wb"),
-    verbosity=2,
-    retry=0,
-    save_last_try=True)
-runner.run(suite)
+if __name__ == '__main__':
+    suite = unittest.TestLoader().loadTestsFromTestCase(case_01)
+    runner = HTMLTestRunner(
+        title="带截图，饼图，折线图，历史结果查看的测试报告",
+        description="",
+        stream=open("./demo.html", "wb"),
+        verbosity=2,
+        retry=0,
+        save_last_try=True)
+    runner.run(suite)
