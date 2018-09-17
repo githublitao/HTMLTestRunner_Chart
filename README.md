@@ -1,5 +1,5 @@
 # HTMLTestRunner_Chart 基于unittest的测试报告，使用详情见demo
-参考链接：
+参考链接：<br>
 http://tungwaiyip.info/software/HTMLTestRunner.html<br>
 https://github.com/GoverSky/HTMLTestRunner_cn<br>
 ### 优化报告内容
