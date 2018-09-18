@@ -12,7 +12,7 @@ https://github.com/GoverSky/HTMLTestRunner_cn<br>
 兼容python2.x 和3.x
 ### 注意：
 1. 在是python3.x 中，如果在这里setUp里初始化driver ，因为3.x版本 unittest 运行机制不同，会导致用力失败时截图失败，目前只有采用捕获异常来截图，或者在setUpClass里初始化driver<br>
-2. 初始化必须命名为driver
+2. driver初始化变量名必须命名为driver
 ### 报告首页：
 ![报告截图](https://github.com/githublitao/HTMLTestRunner_Chart/blob/master/img/%E9%A6%96%E9%A1%B5.png)<br>
 ### 用例截图：
