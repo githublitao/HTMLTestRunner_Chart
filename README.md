@@ -164,7 +164,7 @@ if __name__ == '__main__':
  <head>
     <title>%(title)s</title>
     <meta name="generator" content="%(generator)s"/>
-    <meta http-equiv="Content-Type" content="text/html;charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <script type="text/javascript" src="%(jsonpath)s" charset="gbk"></script>
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.common.min.js"></script>
