@@ -22,7 +22,7 @@ https://github.com/GoverSky/HTMLTestRunner_cn<br>
 ### 历史走势：
 ![历史走势](https://github.com/githublitao/HTMLTestRunner_Chart/blob/master/img/%E8%B5%B0%E5%8A%BF%E5%9B%BE1.png)<br>
 ### 微信打赏：
-![微信打赏](https://github.com/githublitao/api_automation_test/blob/master/img/%E6%94%B6%E6%AC%BE%E7%A0%811.png)<br>
+![微信打赏](https://github.com/githublitao/api_automation_test/blob/master/img/%E6%94%B6%E6%AC%BE%E7%A0%81.png)<br>
 <br>
 ### 失败重试：
 1. 生成报告的参数里面加了一个参数retry=1,这个表示用例失败后，会重新跑一次。<br>
