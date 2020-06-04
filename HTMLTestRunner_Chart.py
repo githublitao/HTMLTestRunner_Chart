@@ -206,7 +206,7 @@ class Template_mixin(object):
     <title>%(title)s</title>
     <meta name="generator" content="%(generator)s"/>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <script type="text/javascript" src="%(jsonpath)s" charset="gbk"></script>
+    <script type="text/javascript" src="%(jsonpath)s" charset="utf-8"></script>
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.common.min.js"></script>
     <!-- <script type="text/javascript" src="js/echarts.common.min.js"></script> -->
@@ -939,7 +939,10 @@ class _TestResult(TestResult):
                     sys.stderr.write("Retesting... ")
                     sys.stderr.write(str(test))
                     sys.stderr.write('..%d \n' % self.trys)
-                    doc = test._testMethodDoc or ''
+                    try:
+                        doc = test._testMethodDoc or ''
+                    except Exception:
+                        doc = ''
                     if doc.find('_retry')!=-1:
                         doc = doc[:doc.find('_retry')]
                     desc ="%s_retry:%d" %(doc, self.trys)
@@ -1121,10 +1124,10 @@ class HTMLTestRunner(Template_mixin):
                         if status[j] == "错误":
                             description["error"] = str(status[j + 1])
                 else:
-                    description["title"] = title.encode("gbk")
-                    description["status"] = heading[2][1].encode("gbk")
-                    description["desc"] = desc.encode("gbk")
-                    description["data"] = data.encode("gbk")
+                    description["title"] = title.encode("utf-8")
+                    description["status"] = heading[2][1].encode("utf-8")
+                    description["desc"] = desc.encode("utf-8")
+                    description["data"] = data.encode("utf-8")
                     status = heading[2][1].split(" ")
                     for j in range(0, len(status)):
                         if status[j] == u"通过":
